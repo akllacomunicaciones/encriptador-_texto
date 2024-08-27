@@ -1,0 +1,263 @@
+/* Estilos básicos para el diseño */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Menú */
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: orangered;
+}
+
+.menu__link {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.menu__link:hover {
+    background: darkorange;
+}
+
+/* Título */
+.titulo {
+    text-align: center;
+    color: orangered;
+    padding: 20px;
+}
+
+.titulo h1 {
+    font-size: 2rem;
+}
+
+.titulo p {
+    font-size: 1.2rem;
+}
+
+/* Main */
+main {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #f4f7fc;
+    color: #2a2a2a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh; /* Cambiado de height a min-height */
+    padding: 20px; /* Añadido para espaciado adicional */
+    margin-bottom: 80px; /* Añadido margen inferior para evitar superposición con el pie de página */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.903);
+    border-radius: 15px;
+    max-width: 1000px;
+    width: 100%;
+    padding: 20px; /* Añadido para evitar que el contenido se pegue a los bordes */
+}
+
+/* Asegurarse de que el contenido no tape el título */
+.input-section, .output-section {
+    padding: 20px;
+    flex: 1;
+}
+
+.input-section {
+    background-color: #eef2f7;
+    flex: 1;
+}
+
+.input-section h1 {
+    margin: 0 0 15px;
+    color: #4a4a4a;
+    font-size: 1.5rem;
+}
+
+textarea {
+    width: 100%;
+    height: 150px;
+    padding: 10px;
+    border: 1px solid #d5d5d5;
+    border-radius: 5px;
+    font-size: 16px;
+    resize: none;
+}
+
+.options {
+    margin: 20px 0;
+}
+
+.buttons {
+    display: flex;
+    gap: 20px;
+}
+
+/* Botones */
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.encrypt-btn {
+    background-color: orangered;
+    color: #fff;
+}
+
+.encrypt-btn:hover {
+    background-color: darkblue;
+}
+
+.decrypt-btn {
+    background-color: #d3d6db;
+    color: rgb(255, 0, 0);
+}
+
+.decrypt-btn:hover {
+    background-color: darkblue;
+    color: white;
+}
+
+/* Sección de salida */
+.output-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 20px; /* Añadido margen inferior para evitar superposición con el pie de página */
+}
+
+#output-message {
+    font-size: 18px;
+    color: #4a4a4a;
+    margin-bottom: 20px;
+}
+
+#output-image {
+    width: 150px;
+    height: auto;
+}
+
+/* Media query para tabletas (pantallas de hasta 768px de ancho) */
+@media (max-width: 768px) {
+    .menu {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .menu__link {
+        font-size: 16px;
+        padding: 8px;
+    }
+
+    .titulo h1 {
+        font-size: 1.8rem;
+    }
+
+    .titulo p {
+        font-size: 1rem;
+    }
+
+    .container {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* Media query para teléfonos móviles (pantallas de hasta 480px de ancho) */
+@media (max-width: 480px) {
+    .menu {
+        padding: 10px;
+    }
+
+    .menu__link {
+        font-size: 14px;
+        padding: 6px;
+    }
+
+    .titulo h1 {
+        font-size: 1.5rem;
+    }
+
+    .titulo p {
+        font-size: 0.9rem;
+    }
+
+    .container {
+        padding: 5px;
+    }
+
+    textarea {
+        height: 120px;
+    }
+
+    .buttons {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    #output-image {
+        width: 100px;
+    }
+}
+
+/* Estilos básicos para el pie de página */
+.footer {
+    background-color: orangered;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+/* Media query para tabletas (pantallas de hasta 768px de ancho) */
+@media (max-width: 768px) {
+    .footer {
+        padding: 15px;
+    }
+
+    .footer p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Media query para teléfonos móviles (pantallas de hasta 480px de ancho) */
+@media (max-width: 480px) {
+    .footer {
+        padding: 10px;
+    }
+
+    .footer p {
+        font-size: 0.8rem;
+    }
+}

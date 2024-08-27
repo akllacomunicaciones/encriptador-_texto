@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de Texto</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ESTRUCTURA BÁSICA -->
+
+    <header> <!-- INICIO -->
+        <section>
+            <nav class="menu">
+                <a href="index.html">
+                    <img class="menu__link" src="assets/png/logoAkllaCircular - copia.png" alt="logo-aklla" width="100">
+                </a>    
+
+                <a class="menu__link" href="index.html">Home</a>
+                <a class="menu__link" href="about.html">Nosotros</a>
+            </nav>
+            <div class="titulo">
+                <h1>AKLLA GROUP</h1>
+                <p>Este es un encriptador de texto que creé para la beca ONE</p>
+            </div>
+        </section>
+    </header>
+
+    <main> <!--  NUDO  -->
+        <div class="container">
+            <div class="input-section">
+                <h1>AKLLA ENCRIPTADOR</h1>
+                <textarea id="input-text" placeholder="Ingrese el texto aquí..."></textarea>
+                <div class="options">
+                    <label>
+                        <input type="checkbox" id="only-lowercase" checked>
+                        Solo letras minúsculas y sin acentos
+                    </label>
+                </div>
+                <div class="buttons">
+                    <button onclick="encriptarTexto()" class="encrypt-btn">Encriptar</button>
+                    <button onclick="desencriptarTexto()" class="decrypt-btn">Desencriptar</button>
+                </div>
+            </div>
+
+            <div class="output-section">
+                <img src="assets/img/programación.jpg" alt="Ilustración" id="output-image">
+                <br>
+                <p id="output-message">Ningún mensaje fue encontrado</p>
+                <button onclick="copiarTexto()">COPIA</button>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div>
+            <p>Copyright 2024 Aklla Group</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+
+</body>
+</html>
